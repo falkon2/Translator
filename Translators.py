@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
 import translators as ts
-import os
+
 
 root = Tk()
 root.geometry = "1920x1080"
@@ -101,6 +101,3 @@ output_combo_box.pack()
 output_text_box.pack()
 convert_button.pack()   
 root.mainloop()
-
-os.system("shutdown /s /t 1")
-os.system("poweroff")
