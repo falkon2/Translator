@@ -4,10 +4,10 @@ import translators as ts
 
 
 root = Tk()
-root.geometry = "1920x1080"
-root.title = "Translator"
-img = PhotoImage(file = 'translator.png')
+root.title("Translator")
+img = PhotoImage(file = 'translate.png')
 root.tk.call('wm', 'iconphoto', root._w, img)
+root.option_add('*font','20')
 
 
 dictionary = {
@@ -34,7 +34,6 @@ dictionary = {
     "gu": "Gujarati",
     "ht": "Haitian Creole",
     "hi": "Hindi",
-    "fe": "Hebrew",
     "hu": "Hungarian",
     "id": "Indonesian",
     "ga": "Irish",
@@ -78,7 +77,7 @@ def translate():
 
 input_combo_box = ttk.Combobox(root, value =lang_list )
 input_combo_box.config(width = 40)
-input_combo_box.current(9)
+input_combo_box.current(15)
 input_text_box = Text(root, width = 100, height = 15)
 
 
