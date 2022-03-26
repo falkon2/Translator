@@ -1,6 +1,5 @@
 from tkinter import *
-from tkinter import ttk
-from tkinter import messagebox
+from tkinter import ttk,messagebox 
 import translators as ts
 
 
@@ -21,7 +20,6 @@ dictionary = {
     "ar": "Arabic",
     "be": "Belarusian",
     "ba": "Bashkir",
-    
     "bn": "Bengali",
     "bs": "Bosnian",
     "zh-Hans": "Chinese",
@@ -73,7 +71,6 @@ def translate():
                 
         text = input_text_box.get(1.0, END)
         print(text)
-        #text = text.TextBlob(ts.bing(from_language=original_language, to_language=converted_language))
         text = ts.bing(text, from_language=original_language, to_language=converted_language)
         output_text_box.insert(1.0, text)
     except Exception as error:
@@ -83,14 +80,13 @@ input_combo_box = ttk.Combobox(root, value =lang_list )
 input_combo_box.config(width = 40)
 input_combo_box.current(9)
 input_text_box = Text(root, width = 100, height = 15)
-#print(input_text_box.get(1.0,END))
 
 
 output_combo_box = ttk.Combobox(root, value =lang_list )
 output_combo_box.config(width = 40)
 output_combo_box.current(12)
 output_text_box = Text(root, width = 100, height = 15)
-#print(output_text_box.get(1.0,END))
+
 
 convert_button = Button(root, text = "Convert", command= translate)
 convert_button.config(width = 40)
